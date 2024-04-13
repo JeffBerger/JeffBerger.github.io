@@ -1,0 +1,7 @@
+TODOs for the site:
+
+2. There should be like a white circle or oval that grows on mouseover for the navbar
+5. Transitions: clicking the navbar should expand the bubble to full screen and then it should fade in the next page
+6. Equations need to move around or something, still not clear what they should be doing
+7. Background should have something like lines shooting through it randomly or something
+8. What about like a radar graph of my skills?
