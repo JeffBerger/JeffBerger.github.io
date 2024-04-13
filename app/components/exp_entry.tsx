@@ -66,13 +66,11 @@ export default function ExpEntry(props: expEntryProps){
                         animate={{
                             pathLength: 1,
                             transition: {
-                                pathLength: {
-                                    ease: "easeInOut", 
-                                    repeat: Infinity,
-                                    repeatType: "loop",
-                                    repeatDelay: 1,
-                                    duration: 3,
-                                    delay: 1.25 * (props.delay || 0)},
+                                ease: "easeInOut", 
+                                repeat: Infinity,
+                                repeatType: "loop",
+                                repeatDelay: 1,
+                                duration: 3
                             }
                         }}
                     />
@@ -84,13 +82,11 @@ export default function ExpEntry(props: expEntryProps){
                         animate={{
                             y: 65,
                             transition: {
-                                y: {
-                                    ease: "easeInOut", 
-                                    repeat: Infinity,
-                                    repeatType: "loop",
-                                    repeatDelay: 1,
-                                    duration: 3,
-                                    delay: 1.25 * (props.delay || 0)},
+                                ease: "easeInOut", 
+                                repeat: Infinity,
+                                repeatType: "loop",
+                                repeatDelay: 1,
+                                duration: 3
                             }
                         }}
                     />
@@ -104,22 +100,12 @@ export default function ExpEntry(props: expEntryProps){
                             y: 65,
                             scale: [1, 1.5, 1, 1.5, 1, 1.5, 1],
                             transition: {
-                                y: {
-                                    ease: "easeInOut", 
-                                    repeat: Infinity,
-                                    repeatType: "loop",
-                                    repeatDelay: 1,
-                                    duration: 3,
-                                    delay: 1.25 * (props.delay || 0)
-                                },
-                                scale: {
-                                    ease: "easeInOut", 
-                                    repeat: Infinity,
-                                    repeatType: "loop",
-                                    repeatDelay: 1,
-                                    duration: 3,
-                                    delay: 1.25 * (props.delay || 0)},
-                                }
+                                ease: "easeInOut", 
+                                repeat: Infinity,
+                                repeatType: "loop",
+                                repeatDelay: 1,
+                                duration: 3
+                            }
                         }}
                     />                    
                 </motion.svg>

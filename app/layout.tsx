@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "./components/navbar";
 import Footer from "./components/footer";
+import React from "react";
 // import Script from 'next/script';
 
 const inter = Inter({ subsets: ["latin"] });
@@ -20,9 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-      <script type="text/javascript" id="MathJax-script" async
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
-      </script>
+        <script type="text/javascript" id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+        </script>
       </head>
       <body className={inter.className}>
         <NavBar />

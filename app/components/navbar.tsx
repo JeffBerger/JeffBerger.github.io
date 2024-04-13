@@ -51,9 +51,9 @@ export default function NavBar(){
                                         repeatType: "reverse"
                                     },
                                 }}
-                                // onHoverEnd={
-                                //     (event) => animate(event.originalTarget, {x: 0, y: 0, rotate: 0})
-                                // }
+                                onHoverEnd={
+                                    (event) => animate(event.target , {x: 0, y: 0, rotate: 0})
+                                }
                             >
                                 <Link href={link.href}>
                                     {link.title}

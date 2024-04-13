@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import { useInView, useAnimate} from "framer-motion";
 
@@ -16,11 +16,19 @@ interface equationProps {
 
 export default function MotionEquation(props: equationProps){
     const [scope, animate] = useAnimate()
+    const [mathjaxLoaded, setMathjaxLoaded] = useState(false);
     const isInview = useInView(scope, { once: true });
+
+    const test_mathjax = () => {
+      if(window.MathJax){
+        setMathjaxLoaded(true);  // Used to trigger a rerender
+      }
+    }
 
     useEffect(() => {
       // window is accessible here.
-      if(typeof window?.MathJax !== "undefined"){
+      test_mathjax();
+      if(window.MathJax){
         let eq = window.MathJax.tex2svg(props.equation).children[0];
         let scale = props.scale || 1;
         let height = eq.getAttribute("height");
@@ -45,12 +53,11 @@ export default function MotionEquation(props: equationProps){
                 }
             )
         }
-        return() => {scope.current?.removeChild(eq);}
+        return () => {scope.current?.removeChild(eq);}
       }else{
-        console.log("MathJax not loaded")
+        setTimeout(test_mathjax, 1000);
       }
     }, [isInview]);
-    
 
     return <span ref={scope}/>;
 };
