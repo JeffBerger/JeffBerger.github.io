@@ -1,4 +1,5 @@
 'use client'
+import React from "react";
 
 import ExperienceBlock from "./components/experience_block";
 import MotionEquation from "./components/framer_eq";

@@ -1,5 +1,6 @@
 import { SlideIn } from "../animations/slidein";
 import ExpEntry from "./exp_entry";
+import React from "react";
 
 const jobs = [
     {

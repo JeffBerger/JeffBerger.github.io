@@ -1,3 +1,5 @@
+import React from "react";
+
 import { Wiggle } from "../animations/wiggle";
 import { motion } from "framer-motion";
 
