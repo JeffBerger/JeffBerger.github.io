@@ -3,7 +3,7 @@ import React from "react";
 
 import Link from "next/link";
 
-import { motion, animate} from "framer-motion";
+import { motion, animate, None} from "framer-motion";
 
 function getRandomIntInclusive(min: number, max: number) {
     const minCeiled = Math.ceil(min);
@@ -52,7 +52,13 @@ export default function NavBar(){
                                     },
                                 }}
                                 onHoverEnd={
-                                    (event) => animate(event.target , {x: 0, y: 0, rotate: 0})
+                                    (event) => {
+                                        // @ts-expect-error
+                                        const target: HTMLElement | null = event.target;
+                                        if (target){
+                                            animate(target, {x: 0, y: 0, rotate: 0});
+                                        }
+                                    }
                                 }
                             >
                                 <Link href={link.href}>
