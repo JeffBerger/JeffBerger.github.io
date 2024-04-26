@@ -20,7 +20,7 @@ export default function MotionEquation(props: equationProps){
     const isInview = useInView(scope, { once: true });
 
     const test_mathjax = () => {
-      if(window.MathJax){
+      if((window as any).MathJax){
         setMathjaxLoaded(true);  // Used to trigger a rerender
       }
     }
@@ -28,8 +28,8 @@ export default function MotionEquation(props: equationProps){
     useEffect(() => {
       // window is accessible here.
       test_mathjax();
-      if(window.MathJax){
-        let eq = window.MathJax.tex2svg(props.equation).children[0];
+      if((window as any).MathJax){
+        let eq = (window as any).MathJax.tex2svg(props.equation).children[0];
         let scale = props.scale || 1;
         let height = eq.getAttribute("height");
         let width = eq.getAttribute("width");

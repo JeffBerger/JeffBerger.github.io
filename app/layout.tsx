@@ -6,7 +6,7 @@ import Footer from "./components/footer";
 import React from "react";
 // import Script from 'next/script';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"]});
 
 export const metadata: Metadata = {
   title: "Jeffrey Berger Ph.D.",
@@ -25,7 +25,7 @@ export default function RootLayout({
           src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
         </script>
       </head>
-      <body className={inter.className}>
+      <body className={"bg-slate900 " + inter.className}>
         <NavBar />
         {children}
         <Footer />

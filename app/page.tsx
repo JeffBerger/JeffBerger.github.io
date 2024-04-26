@@ -3,19 +3,15 @@ import React from "react";
 
 import ExperienceBlock from "./components/experience_block";
 import MotionEquation from "./components/framer_eq";
+import SkillsRadar from "./components/skills_radar";
 
 export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24 max-w-7xl mx-auto">
       <div className="flex gap-x-2">
-        <div>
-          <div className="text-4xl">
-            Jeffrey Berger, Ph.D.
-          </div>
-          <div className="text-lg">
-            I specialize in building things for other people.  If you are another person and you need something built go ahead and reach out.
-          </div>
+        <div className="text-4xl">
+          Jeffrey Berger, Ph.D.
         </div>
         <div>
           <MotionEquation
@@ -33,6 +29,12 @@ export default function Home() {
             draw_sec={6}
           />
         </div>
+      </div>
+      <div className="flex gap-x-2">
+        <div className="text-lg">
+            I specialize in building things for other people.  If you are another person and you need something built go ahead and reach out.
+        </div>
+        <SkillsRadar />
       </div>
       <ExperienceBlock />
     </main>
