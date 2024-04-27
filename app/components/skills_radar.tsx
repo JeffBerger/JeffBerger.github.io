@@ -27,7 +27,7 @@ export default function SkillsRadar () {
       return () => {
         const skills_div = skillgraph.current;
         if (skills_div) {
-            skills_div.innerHTML = '';
+            (skills_div as any).innerHTML = '';
         }
     }
   } , []);
