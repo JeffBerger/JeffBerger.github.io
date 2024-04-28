@@ -14,6 +14,8 @@ export default function SkillsRadar () {
             .data(data)
             .size('size')
             .width(600)
+            .height(600)
+            .excludeRoot(true)
             .tooltipContent(
                 (_, node: any) => {
                     return node.data.text;
