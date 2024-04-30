@@ -29,14 +29,15 @@ export default function MotionEquation(props: equationProps){
       // window is accessible here.
       test_mathjax();
       if((window as any).MathJax){
-        let eq = (window as any).MathJax.tex2svg(props.equation).children[0];
-        let scale = props.scale || 1;
-        let height = eq.getAttribute("height");
-        let width = eq.getAttribute("width");
+        const eq = (window as any).MathJax.tex2svg(props.equation).children[0];
+        const scale = props.scale || 1;
+        const height = eq.getAttribute("height");
+        const width = eq.getAttribute("width");
+        const scope_target = scope.current;
         eq.setAttribute("width", `${scale * parseFloat(width)}ex`);
         eq.setAttribute("height", `${scale * parseFloat(height)}ex`);
 
-        scope.current?.appendChild(eq);
+        scope_target.appendChild(eq);
         if (isInview) {
             animate(
                 "path,rect",
@@ -53,11 +54,11 @@ export default function MotionEquation(props: equationProps){
                 }
             )
         }
-        return () => {scope.current?.removeChild(eq);}
+        return () => {scope_target.removeChild(eq);}
       }else{
-        setTimeout(test_mathjax, 1000);
+        setTimeout(test_mathjax, 300);
       }
-    }, [isInview]);
+    });
 
     return <span ref={scope}/>;
 };

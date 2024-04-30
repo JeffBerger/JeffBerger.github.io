@@ -1,4 +1,4 @@
-export default {
+let data = {
     name: 'Skills',
     color: '#81272e',
     text: "Some of my skills",
@@ -297,3 +297,5 @@ export default {
         ]}
     ]
 };
+
+export default data;

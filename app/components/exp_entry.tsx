@@ -1,5 +1,7 @@
 import React from "react";
 
+import Image from 'next/image';
+
 import { Wiggle } from "../animations/wiggle";
 import { motion } from "framer-motion";
 
@@ -48,7 +50,7 @@ export default function ExpEntry(props: expEntryProps){
                   }}
                 >
                     <Wiggle delay={Math.random() * 1.5}>
-                        <img src={logo} alt={props.company} height="50px" width="50px"/>
+                        <Image src={logo} alt={props.company} height={50} width={50}/>
                     </Wiggle>
                 </motion.a>
                 <motion.svg

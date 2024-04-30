@@ -25,21 +25,21 @@ const jobs = [
         title: "Director of Engineering",
         company: "RotoQL",
         url: "https://rotoql.com",
-        logo: "./img/rotoql.png",
+        logo: "/img/rotoql.png",
         description: "Constructing the whole new products"
     },
     {
         title: "Lead Database Engineer",
         company: "Knewton",
         url: "https://knewton.com",
-        logo: "./img/knewton.png",
+        logo: "/img/knewton.png",
         description: "Running a lot of cassandra"
     },
     {
         title: "Lead Database Engineer",
         company: "Sailthru",
         url: "https://sailthru.com",
-        logo: "./img/sailthru.png",
+        logo: "/img/sailthru.png",
         description: "All the mongo r belong to me"
     },
     {

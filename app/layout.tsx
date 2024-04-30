@@ -21,9 +21,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script type="text/javascript" id="MathJax-script" async
-          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
-        </script>
+        <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+        <script type="text/javascript" async src="https://unpkg.com/sunburst-chart"></script>
       </head>
       <body className={"bg-slate900 " + inter.className}>
         <NavBar />
