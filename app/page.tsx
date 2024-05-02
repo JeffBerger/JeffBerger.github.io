@@ -13,17 +13,19 @@ export default function Home() {
       <div className="flex gap-x-2 h-36 align-middle">
         <MotionEquation
           equation='\ \left( i \partial \!\!\!/ - m  \right) \psi  = 0 \'
-          scale={2}
+          width={300}
+          height={120}
           start_color="rgb(0,0,0)"
           end_color="rgb(230,250,210)"
           draw_sec={6}
         />
-        <div className="text-4xl">
-          Jeffrey Berger, Ph.D.
-        </div>
+        <span className="inline-block text-4xl align-middle">
+          Jeffrey Berger Ph.D.
+        </span>
         <MotionEquation
           equation='\ \hat{H}|\psi\rangle = i \hbar \frac{d}{dt}|\psi\rangle\'
-          scale={2}
+          width={300}
+          height={120}
           start_color="rgb(0,0,0)"
           end_color="rgb(230,250,210)"
           draw_sec={6}
@@ -31,11 +33,16 @@ export default function Home() {
       </div>
       <div className="flex gap-x-2">
         <div>
-          <div className="text-lg">
-              I specialize in building things for other people.  If you are another person and you need something built go ahead and reach out.
+          <div className="text-2xl">
+              Welconme to my personal page, which is currently under construction. I&apos;m a physicist who has been doing software development for the last 11 years.
           </div>
-          <div className="text-lg">
-              I have a summary of the skills I&aposve picked up over the years on the right that you can click through.
+          <br/>
+          <div className="text-xl">
+              My specialty is in working with small teams, generally at startups on big problems. I&apos;ve built several companies from the ground up as well as building out the technical team. I&apos;ve given technical talks on research and software development, managed teams and projects and brought them to market, supported production from 24/7 uptime requirements to ensuring billions of dollars in trades go out daily.
+          </div>
+          <br/>
+          <div className="text-xl">
+              If this sounds interesting, go ahead and reach out. I&apos;m always looking for new opportunities, but make sure it isn&apos;t an easy problem. Those are boring.
           </div>
         </div>
         <SkillsRadar />

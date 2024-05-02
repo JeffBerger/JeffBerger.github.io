@@ -12,6 +12,8 @@ interface equationProps {
     end_color: string;
     draw_sec: number;
     delay_sec?: number;
+    width?: number;
+    height?: number;
 }
 
 export default function MotionEquation(props: equationProps){
@@ -22,6 +24,8 @@ export default function MotionEquation(props: equationProps){
     const test_mathjax = () => {
       if((window as any).MathJax){
         setMathjaxLoaded(true);  // Used to trigger a rerender
+      } else {
+        setMathjaxLoaded(false);
       }
     }
 
@@ -31,11 +35,16 @@ export default function MotionEquation(props: equationProps){
       if((window as any).MathJax){
         const eq = (window as any).MathJax.tex2svg(props.equation).children[0];
         const scale = props.scale || 1;
-        const height = eq.getAttribute("height");
-        const width = eq.getAttribute("width");
+        if (props.height && props.width) {
+            eq.setAttribute("width", `${props.width}px`);
+            eq.setAttribute("height", `${props.height}px`);
+        } else {
+            const height = props.height || parseFloat(eq.getAttribute("height"));
+            const width = props.width || parseFloat(eq.getAttribute("width"));
+            eq.setAttribute("width", `${scale * width}ex`);
+            eq.setAttribute("height", `${scale * height}ex`);
+        }
         const scope_target = scope.current;
-        eq.setAttribute("width", `${scale * parseFloat(width)}ex`);
-        eq.setAttribute("height", `${scale * parseFloat(height)}ex`);
 
         scope_target.appendChild(eq);
         if (isInview) {
@@ -58,7 +67,20 @@ export default function MotionEquation(props: equationProps){
       }else{
         setTimeout(test_mathjax, 300);
       }
-    });
+    }, [
+        animate,
+        mathjaxLoaded,
+        isInview,
+        scope,
+        props.equation,
+        props.start_color,
+        props.end_color,
+        props.draw_sec,
+        props.delay_sec,
+        props.scale,
+        props.width,
+        props.height
+    ]);
 
     return <span ref={scope}/>;
 };

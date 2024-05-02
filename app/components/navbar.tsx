@@ -16,8 +16,8 @@ export default function NavBar(){
 
     const links = [
         {
-            title: "about",
-            href: "/about"
+            title: "contact",
+            href: "/contact"
         },
         {
             title: "research",

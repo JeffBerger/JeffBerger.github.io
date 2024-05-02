@@ -4,6 +4,7 @@ import Image from 'next/image';
 
 import { Wiggle } from "../animations/wiggle";
 import { motion } from "framer-motion";
+import Moment from "react-moment";
 
 
 interface expEntryProps {
@@ -13,6 +14,8 @@ interface expEntryProps {
     company: string;
     description: string;
     delay?: number;
+    start_date: Date;
+    end_date?: Date;
 }
 
 export default function ExpEntry(props: expEntryProps){
@@ -38,6 +41,22 @@ export default function ExpEntry(props: expEntryProps){
             }
         }
     }
+
+    const start = (
+        <Moment format="MMMM YYYY">
+            {props.start_date.toISOString()}
+        </Moment>
+    )
+    // const start = <span>present</span>;
+    let end = <span>present</span>;
+    if (props.end_date){
+        end = (
+            <Moment format="MMMM YYYY">
+                {props.end_date.toISOString()}
+            </Moment>
+        )
+    }
+
     return (
         <div className="flex items-start lg:gap-x-6 gap-x-4 max-w-2xl">
             <div>
@@ -115,7 +134,9 @@ export default function ExpEntry(props: expEntryProps){
             <div className="text-left">
                 <div className="text-xl pb-4">
                     <span className="text-xl pe-8">{props.company}</span>
-                    <span className="text-lg text-slate-400"> Start Date - End Date</span>
+                    <span className="text-lg text-slate-400">
+                        {start} - {end}
+                    </span>
                 </div>
                 <div className="">
                     {props.description}

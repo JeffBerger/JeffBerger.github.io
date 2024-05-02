@@ -8,16 +8,17 @@ export default function SkillsRadar () {
    const skillgraph = useRef(null);
    const [sunburstLoaded, setSunburstLoaded] = useState(false);
 
-   const test_sunburst = () => {
+   function test_sunburst () {
     if((window as any).Sunburst){
       setSunburstLoaded(true);  // Used to trigger a rerender
+    } else{
+      setSunburstLoaded(false);
     }
   }
 
    useEffect(() => {
       if ((window as any).Sunburst) {
           const skills_div = skillgraph.current;
-          test_sunburst();
           if (skills_div) {
             (window as any).Sunburst()
                 .data(data)
@@ -41,9 +42,10 @@ export default function SkillsRadar () {
             }
           }
       } else {
+        setSunburstLoaded(false);
         setTimeout(test_sunburst, 300);
       }
-  } , []);
+  } , [skillgraph, sunburstLoaded]);
 
   return <div className='w-600' ref={skillgraph} />;
 }
