@@ -16,6 +16,7 @@ interface expEntryProps {
     delay?: number;
     start_date: Date;
     end_date?: Date;
+    charLimit?: number;
 }
 
 export default function ExpEntry(props: expEntryProps){
@@ -57,8 +58,11 @@ export default function ExpEntry(props: expEntryProps){
         )
     }
 
+    const charLimit = props.charLimit || 300;
+    const description = props.description.slice(0, charLimit) + (props.description.length > charLimit ? "..." : "");
+
     return (
-        <div className="flex items-start lg:gap-x-6 gap-x-4 max-w-2xl">
+        <div className="flex items-start lg:gap-x-6 gap-x-4 max-w-2xl hover:bg-slate-900 rounded-lg p-5">
             <div>
                 <motion.a
                   href={url}
@@ -138,8 +142,8 @@ export default function ExpEntry(props: expEntryProps){
                         {start} - {end}
                     </span>
                 </div>
-                <div className="">
-                    {props.description}
+                <div className="whitespace-pre-line">
+                    {description}
                 </div>
             </div>
         </div>

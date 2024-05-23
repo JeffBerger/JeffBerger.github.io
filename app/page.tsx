@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24 max-w-7xl mx-auto">
-      <div className="flex gap-x-2 h-36 align-middle">
+      <div className="flex gap-x-2 h-36">
         <MotionEquation
           equation='\ \left( i \partial \!\!\!/ - m  \right) \psi  = 0 \'
           width={300}
@@ -19,9 +19,9 @@ export default function Home() {
           end_color="rgb(230,250,210)"
           draw_sec={6}
         />
-        <span className="inline-block text-4xl align-middle">
+        <p className="text-4xl py-10">
           Jeffrey Berger Ph.D.
-        </span>
+        </p>
         <MotionEquation
           equation='\ \hat{H}|\psi\rangle = i \hbar \frac{d}{dt}|\psi\rangle\'
           width={300}
