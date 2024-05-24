@@ -38,7 +38,7 @@ export default function NavBar(){
                 <nav>
                     <ul className="flex items-center gap-x-8">
                         {links.map((link, index) => (
-                            <div className="hover:bg-slate-900 p-2 rounded">
+                            <div className="hover:bg-slate-900 p-2 rounded" key={index}>
                             <motion.li
                                 key={index}
                                 whileHover={{
