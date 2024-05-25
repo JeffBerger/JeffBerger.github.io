@@ -34,7 +34,7 @@ export default function Home() {
       <div className="flex gap-x-2">
         <div>
           <div className="text-2xl">
-              Welconme to my personal page, which is currently under construction. I&apos;m a physicist who has been doing software development for the last 11 years.
+              Welcome to my personal page, which is currently under construction. I&apos;m a physicist who has been doing software development for the last 11 years.
           </div>
           <br/>
           <div className="text-xl">

@@ -20,10 +20,6 @@ export default function NavBar(){
             href: "/contact"
         },
         {
-            title: "research",
-            href: "/research"
-        },
-        {
             title: "blog",
             href: "/blog"
         }

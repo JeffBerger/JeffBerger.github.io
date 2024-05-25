@@ -58,7 +58,7 @@ export default function ExpEntry(props: expEntryProps){
         )
     }
 
-    const charLimit = props.charLimit || 300;
+    const charLimit = props.charLimit || 200;
     const description = props.description.slice(0, charLimit) + (props.description.length > charLimit ? "..." : "");
 
     return (
