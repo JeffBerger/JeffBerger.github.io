@@ -38,11 +38,11 @@ export default function Home() {
           </div>
           <br/>
           <div className="text-xl">
-              My specialty is in working with small teams, generally at startups on big problems. I&apos;ve built several companies from the ground up as well as building out the technical team. I&apos;ve given technical talks on research and software development, managed teams and projects and brought them to market, supported production from 24/7 uptime requirements to ensuring billions of dollars in trades go out daily.
+              My specialty is in working with small teams, generally at startups on big problems. I&apos;ve built several companies from the ground up as well as building out the technical team.
           </div>
           <br/>
           <div className="text-xl">
-              If this sounds interesting, go ahead and reach out. I&apos;m always looking for new opportunities, but make sure it isn&apos;t an easy problem. Those are boring.
+              I&apos;ve given technical talks on research and software development, managed teams and projects and brought them to market, supported production from 24/7 uptime requirements to ensuring billions of dollars in trades go out daily.
           </div>
         </div>
         <SkillsRadar />

@@ -5,88 +5,101 @@ let data = {
     children: [
         {
             name: 'Leadership',
-            color: ' #a15755',
-            text: "Click in to see some of my leadership skills",
+            color: ' #81272e',
+            text: "Click in for a leadership skills summary",
             children: [
                 {
                     name: 'Team Management',
-                    color: 'green',
+                    color: '#761500',
+                    text: "I've been managing technical teams for about a decade",
                     children: [
                         {
                             name: 'Team Building',
-                            color: 'green',
+                            text: "A lot more to building trust than buying some beers for a group of adults",
+                            color: '#004f0f',
                             size: 1
                         }, {
                             name: 'Mentoring',
-                            color: 'pink',
+                            text: "I've been teaching in some capacity since 2004",
+                            color: '#0d4217',
                             size: 1
                         }, {
                             name: 'Technical Lead',
-                            color: 'pink',
+                            text: "Making sure to remove technical blockers but let others run with a project when they can",
+                            color: '#112915',
                             size: 1
                         }, {
                             name: 'CTO',
-                            color: 'red',
+                            text: "Just beacuse you don't have an engineer above you doesn't mean that the other engineers have nothing to teach you.",
+                            color: '#004f0f',
                             size: 1
                         }
                     ]
                 }, {
                     name: 'Vendor Relations',
-                    color: 'pink',
+                    text: "A necessary evil",
+                    color: '#004f0f',
                     children: [
                         {
                             name: 'Contract Negotiation',
-                            color: 'green',
+                            text: "Mostly about buying only what we actually need",
+                            color: '#161963',
                             size: 1
                         }, {
                             name: 'Vendor Selection',
-                            color: 'pink',
+                            text: "Probably the most important and hardest part of a vendor relationship",
+                            color: '#020663',
                             size: 1
                         }, {
                             name: 'Vendor Management',
-                            color: 'pink',
+                            text: "Keeping everyone focused on the right task",
+                            color: '#2e305f',
                             size: 1
                         }
                     ]
                 }, {
                     name: 'Public Speaking',
-                    color: 'grey',
+                    color: '#121212',
+                    text: "Giving presentations and talking to external parties is no problem",
                     children: [
                         {
                             name: 'Conferences',
-                            color: 'green',
+                            text: "I've given many talks both acaedmic and engineering at conferences through the years",
+                            color: '#761500',
                             size: 1
                         }, {
                             name: 'Meetups',
-                            color: 'pink',
+                            text: "Attending meetups to build the company's nextwork or being a speaker at one.",
+                            color: '#81272e',
                             size: 1
                         }, {
                             name: 'Workshops',
-                            color: 'pink',
+                            text: "A good team outing that can build skills and networks at the same time",
+                            color: '#5c1616',
                             size: 1
                         }
                     ]
                 }, {
                     name: 'Project managment',
-                    color: 'red',
+                    color: '#3b3b3b',
                     children: [
                         {
                             name: 'Agile',
-                            color: 'green',
+                            color: '#81272e',
                             size: 1
                         }, {
                             name: 'Scrum',
-                            color: 'pink',
+                            color: '#112915',
                             size: 1
                         }, {
                             name: 'Kanban',
-                            color: 'pink',
+                            color: '#020663',
                             size: 1
                         }
                     ]
                 }, {
                     name: 'Hiring',
-                    color: 'yellow',
+                    color: '#2e305f',
                     children: [
                         {
                             name: 'Recruitment',

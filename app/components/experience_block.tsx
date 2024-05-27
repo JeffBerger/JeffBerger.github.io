@@ -77,6 +77,14 @@ const jobs: Job[] = [
         url: "https://rotoql.com",
         logo: "/img/rotoql.png",
         description: `The first technical hire at a fantasy sports / sports betting startup in NYC.
+
+        I joined when there was one product that was soley built by the CTO and managed by him. I was put in charge of building the second product, a fantasy sports app that was primarily for mobile. I was the primary individual contrubutor on the fantasy product and a manager/IC on the bet product.
+        
+        The fantasy product involved using undocumented APIs to integerate our app with Yahoo, ESPN and CBS as well as implementation of fast integer optimziation that was configurable by the user.
+        
+        I hired out a team and expanded our fantasy sports infrastructure to include services targetting sports betting as well. The two products shared common backend services such as an internal data service as well as authentication, so a user could use SSO between all Roto services.
+
+        The final project was to build off of the recent Transformers papers to build a structure data to natural language generator with the aim to automatically generate accurate and realistic articles off of sports statistics. the team and I got pretty close and this was well before ChatGPT made this kind of work obviously possible. We struggled with hallucinations in our model, which current transformers still have problems with. I wish I took it a bit more seriously as the future rather than just a curiousity.
         `,
         start_date: new Date("2017-04-15"),
         end_date: new Date("2019-06-15")
@@ -87,6 +95,12 @@ const jobs: Job[] = [
         url: "https://knewton.com",
         logo: "/img/knewton.png",
         description: `Joined Knewton, a mid sized ed-tech startup, to form the Database Engineering team for a large Cassandra deployment at this mid-sized ed-tech startup.
+
+        I brought my lead database engineer from Sailthru with me as an entire-team hire in order to bring order to the chaos of the large Cassandra deployments that Knewton ran on and had both performance and uptime issues. Neither of us had worked on Cassandra before.
+
+        Over the two years that I was at Knewton the team improved uptime and cost of the database system as well as overall cloud spend, saving close to a million a year. My team was part of the first cohort of certified Cassandra administrators and the team gave several talks at database conferences around the country.
+
+        We built an automation suite around the Cassandra clusters and optimized the JVM environment for our use case. The system ran smoothly enough that the database team was dissolved and the engineers reallocated to other teams. I was offered the position of Director of Infrastructure, which I declined.
         `,
         start_date: new Date("2015-09-15"),
         end_date: new Date("2017-04-15")
@@ -96,7 +110,13 @@ const jobs: Job[] = [
         company: "Sailthru",
         url: "https://sailthru.com",
         logo: "/img/sailthru.png",
-        description: `Hired to Sailthru, a mid-sized email personalization startup, as a Database Engineer to run a large MongoDB deployment, eventually leading the team before I left.
+        description: `Hired to Sailthru, a mid-sized email personalization startup, as a Database Engineer to run a large MongoDB deployment, eventually leading the team.
+
+        Sailthru ran one of the largest MongoDB sharded clusters at the time, as well as sending ~2% of total global email volume. I came on as a Database Engineer and was promoted to the team lead after about a year. I hired the team up to a total of four engineers who gave talked as various conferences on large scale MongoDB deployments, including MongoDB World.
+
+        Our deployments were a hybrid of AWS cloud and Sailthru owned infrastructure in colocated datacenters.  I worked with the system operations team to execute a datacenter move from Manhattan to NJ as well as reconfigure our database hardware. The cloud spend was decreased by ~$1M/yr through improved archiving methods.
+
+        This is also where I picked up python and asyncronous programming, working with some very talented engineers.
         `,
         start_date: new Date("2013-08-15"),
         end_date: new Date("2015-09-15")
@@ -104,7 +124,16 @@ const jobs: Job[] = [
     {
         title: "Software Engineer",
         company: "We-Care",
+        logo: "/img/we-care.jpeg",
         description: `Joined We-Care, a small startup that did affiliate advertising, as a Software Engineer.
+
+        This was my first job out of my Ph.D. program. There was another Ph.D. Physicist working there and I responded to an ad that was looking for a physicist/coder. It turns out they didn't need a physicist but often people just out of gradschool didn't know the market and they could underpay them for some amount of time.
+
+        It was helpful, I learned a lot about some modern (and some Ancient) programming techniques. I built a message bus in C++ that interacted with a MongoDB server that they were rolling onto. I did a bunch of backend and website improvements, learned PhP (which I have thankfully all forgotten now) and Javascript (which continues to haunt me).
+
+        I did some mapreduce/hadoop work as well as install/uninstall rate data analysis. One of the things the hadoop and uninstall message data showed was just how much people hated the browser extensions that were installed by We-Care on people's computers, mostly unknown to them. There were a good amount of death threats in there. A real surprise for my first industry job.
+
+        But wow you really are digging into the past, why are you all the way back here?
         `,
         start_date: new Date("2013-03-15"),
         end_date: new Date("2013-08-15")
@@ -145,7 +174,7 @@ export default function ExperienceBlock(){
     >
         <motion.div
             onClick={(e) => e.stopPropagation()}  
-            className="h-1/2 w-1/2 max-w-3xl bg-gradient-to-t from-amber-950 to-black bg-opacity-95 rounded-lg p-8 overflow-y-scroll"
+            className="h-1/2 w-1/2 max-w-3xl bg-gradient-to-t bg-slate-900 bg-opacity-95 rounded-lg p-8 overflow-y-scroll"
             variants={dropIn}
             initial="hidden"
             animate="visible"
