@@ -1,0 +1,102 @@
+% LaTeX file for resume
+% This file uses the resume document class (res.cls)
+
+\documentclass{res}
+%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+%\usepackage{newcent}   % uses new century schoolbook postscript font
+\usepackage{multicol}
+\setlength{\textheight}{9.5in} % increase text height to fit on 1-page
+
+\begin{document}
+\name{Jeffrey Berger, Ph.D.\\[12pt]}
+\begin{resume}
+\vspace{-28pt}
+\begin{center}
+\Large Senior Technology Leader | Jeffrey.J.Berger@gmail.com\\
+\end{center}
+
+\begin{itemize}
+\item Veteran early-startup full-stack IC and technical manager.
+\item I specialize in rapid go-to-market of MVPs as well as complete rebuild of legacy systems and underperforming technical teams.
+\item Every position I have had has been at least 50\% IC, leading the technical team and removing blockers from my team members to maximize velocity.
+\end{itemize}
+\vspace{-2pt}
+
+\section{EXPERIENCE}
+
+\vspace{-8pt}
+\begin{tabbing}
+   \hspace{2.0in}\= \hspace{2.2in}\= \kill % set up two tab positions
+{\bf CTO } \> Qognitive \> Jan 2024 - Present
+\end{tabbing}\vspace{-15pt}
+
+I am a founding team member building out a team of specialists to deploy a quantum ML algorithm as a SAAS product on a rapid timeline. The ML algorithm in python and C have been impelemted by myself as well as several fundamental theoretical extensions of the algorithm, including the pytorch integration and the quantum-hardware prototype of the algorithm.
+
+\vspace{-8pt}
+\begin{tabbing}
+   \hspace{2.0in}\= \hspace{2.2in}\= \kill % set up two tab positions
+{\bf CTO } \> Duality Group \> May 2021 - Jan 2024 \\
+{\bf Director } \> Duality Group \> June 2019 - May 2021
+\end{tabbing}\vspace{-15pt}
+
+As the first domestic technical hire I then engaged on a rebuild of the core algorithm-execution system from a C\# monolith to a Python service architecture. The python system decreased the engineer headcount from 30+ consultants to 3 in-house engineers. Execution time for the algorithms dropped allowing much larger and more complicated algorithms. As of 2024 the system was running well over 100x the number of calculations in the same time as the system it replaced with 1/10th the number of engineers.
+
+\vspace{-8pt}
+\begin{tabbing}
+   \hspace{2.0in}\= \hspace{2.2in}\= \kill % set up two tab positions
+{\bf Director of Engineering } \> RotoQL \> Feb 2018 - May 2019 \\
+{\bf Head of Architecture } \> RotoQL \> Apr 2017 - Feb 2018
+\end{tabbing}\vspace{-15pt}
+
+Hired as the first engineer to build a fantasy sport app from scratch. Built out a team and constructed a service based architecture that served thousands of users executing constrained-integer-optimization problems. The service system was extended to handle data ingestion for a betting product as well as SSO for our customers. 
+
+\vspace{-8pt}
+\begin{tabbing}
+   \hspace{2.0in}\= \hspace{2.2in}\= \kill % set up two tab positions
+{\bf SRE Manager} \> Knewton \> Jan 2017 - Apr 2017 \\
+{\bf Senior Database Engineer} \> Knewton \> Sept 2015 - Jan 2017
+\end{tabbing}
+
+\vspace{-15pt}
+    Led a team of engineers to manage \~150 node Cassandra deployment.  Scaling operations were automated, costs were reduced by 60\% and reliability increased.
+
+\vspace{-8pt}
+\begin{tabbing}
+   \hspace{2.0in}\= \hspace{2.2in}\= \kill % set up two tab positions
+{\bf Lead Database Engineer} \> Sailthru \> October 2014 - Sept 2015 \\
+{\bf Database Engineer} \> Sailthru \> August 2013 - October 2014
+\end{tabbing}\vspace{-15pt}
+   Stabilized one of the largest distributed MongoDB systems in the world at the time and executed a physical datacenter migration without downtime while decreasing alerts 10x and saving \$1+M/yr.
+
+\vspace{-12pt}
+\begin{tabbing}
+   \hspace{2.0in}\= \hspace{2.2in}\= \kill % set up two tab positions
+{\bf Developer} \> We-Care.com \> March 2013 - August 2013
+\end{tabbing}\vspace{-15pt}
+
+
+\section{EDUCATION}
+    Ph.D Physics | Pennsylvania State University - 2012\\
+    B.S. Physics (Honors), B.A. Mathematics | SUNY Binghamton - 2007\\
+    \vspace{-2pt}
+
+\section{TECHNICAL SKILLS}
+\vspace{-1pt}
+\begin{multicols}{4}
+\begin{itemize}
+\item C/C++
+\item Bash/Linux
+\item MongoDB
+\item MySQL
+\item Python
+\item Cassandra
+\item React
+\item Ansible
+\end{itemize}
+\end{multicols}
+\vspace{-12pt}
+\begin{center}
+\textit{Journal publications, conference proceedings, talks, and references available upon request}
+\end{center}
+\end{resume}
+\end{document}

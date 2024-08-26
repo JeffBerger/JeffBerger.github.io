@@ -82,17 +82,16 @@ let data = {
                 }, {
                     name: 'Project managment',
                     color: '#3b3b3b',
+                    text: "Shipping things on time and keeping everyone pushing out code",
                     children: [
                         {
                             name: 'Agile',
                             color: '#81272e',
-                            size: 1
-                        }, {
-                            name: 'Scrum',
-                            color: '#112915',
+                            text: "I've managed some of my teams with the agile framework",
                             size: 1
                         }, {
                             name: 'Kanban',
+                            text: "Some teams are small enough that a simple kanban board is all one needs",
                             color: '#020663',
                             size: 1
                         }
@@ -100,6 +99,7 @@ let data = {
                 }, {
                     name: 'Hiring',
                     color: '#2e305f',
+                    text: "I've built small teams out for "
                     children: [
                         {
                             name: 'Recruitment',
